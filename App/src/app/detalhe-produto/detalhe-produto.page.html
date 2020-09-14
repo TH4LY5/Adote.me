@@ -1,0 +1,63 @@
+<ion-content>
+  <ion-header class="ion-no-border">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-buttons slot="start">
+          <ion-back-button text="" mode="md"></ion-back-button>
+        </ion-buttons>
+      </ion-buttons>
+      <!-- <ion-buttons slot="end">
+        <ion-button (click)="presentPopover($event)">
+          <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+        </ion-button>
+      </ion-buttons> -->
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="about-header">
+    <!-- Instead of loading an image each time the select changes, use opacity to transition them -->
+    <div class="about-image madison" [ngStyle]="'madison' && {'opacity': '1'}"></div>
+    <!-- <div class="about-image austin" [ngStyle]="location === 'austin' && {'opacity': '1'}"></div>
+    <div class="about-image chicago" [ngStyle]="location === 'chicago' && {'opacity': '1'}"></div>
+    <div class="about-image seattle" [ngStyle]="location === 'seattle' && {'opacity': '1'}"></div> -->
+  </div>
+
+  <div class="about-info">
+    <h3 class="ion-padding-top ion-padding-start">Bob</h3>
+
+    <p class="ion-padding-start ion-padding-end">
+     <b style="color: white;"> Detalhe do broduto dslfjsjdgfsdfksdkfndsjanaslçjdnas</b> <br>
+     <b style="font-size: 14px;">DETALHES:</b> <br>
+     <b style="font-size: 12px;">IDADE: </b> 3 meses <br>
+     <b style="font-size: 12px;">PORTE: </b> Medio <br>
+     <b style="font-size: 12px;">COR: </b> Caramelo <br>
+     <b style="font-size: 12px;">RAÇA: </b> Misto <br>
+     <b style="font-size: 12px;">SEXO: </b> Macho <br>
+    </p>
+    <ion-button expand="full"><b>ME ADOTE</b> 🐕</ion-button>
+  </div>
+</ion-content>
+
+<!-- <ion-footer class="ion-no-border" style="align-items: center;">
+  <ion-toolbar>
+    <ion-buttons >
+      <ion-button color="primary">Primary</ion-button>
+    </ion-buttons>
+  
+
+  <ion-grid style="align-items: center;">
+    <ion-row>
+      <ion-col>
+        <ion-buttons >
+          <ion-button  >Full Button</ion-button>
+        </ion-buttons>
+      </ion-col>
+      <ion-col >
+        <ion-buttons >
+          <ion-button expand="full">Full Button</ion-button>
+        </ion-buttons>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  </ion-toolbar>
+</ion-footer> -->
