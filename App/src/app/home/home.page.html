@@ -2,13 +2,19 @@
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
+      <!-- <ion-button  (click)="abrirFiltro()"><ion-icon name="filter-outline"></ion-icon></ion-button> -->
+    </ion-buttons>
+    <ion-title style="text-align: center; color:aqua" ><b>Adote.me</b></ion-title>
+    <ion-buttons slot="end">
+      <!-- <ion-menu-button></ion-menu-button> -->
+      <ion-button  (click)="abrirFiltro()"><ion-icon name="filter-outline"></ion-icon></ion-button>
     </ion-buttons>
 
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-button expand="full" color="success" (click)="abrirFiltro()">Filtro</ion-button>
+  
 
   
   <ion-slides [options]="slideOpt">
@@ -22,6 +28,7 @@
   </ion-slides>
 
   <div>
+
   <p style="padding: 10px;"><b>Os doguinhos </b><ion-button style="align-self: flex-end;" size="small" fill="outline" (click)="todos();">Ver mais</ion-button> </p>
 </div>
   
@@ -45,9 +52,9 @@
         <ion-img style="pointer-events:none; "
           src="https://www.joanadarcam.com.br/wp-content/uploads/2020/02/images-92.jpeg"></ion-img>
         <ion-label style="text-align: start;">Gatinho </ion-label>
+        <ion-button shape="block" fill="outline" (click)="abriDescricao();">Ver Mais</ion-button>
       </ion-col>
     </ion-slide>
   </ion-slides>
-
-
+  
 </ion-content>
