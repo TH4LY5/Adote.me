@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header class=\"ion-no-border\">\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-menu-button></ion-menu-button>\n    </ion-buttons>\n    \n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-button  expand=\"full\" color=\"success\" (click)=\"abrirFiltro()\">Filtro</ion-button>\n\n\n<p style=\"padding: 10px;\"><b>Os doguinhos</b></p>\n  <ion-slides [options]=\"{ slidesPerView: 'auto', zoom: false, grabCursor: true }\">\n    <ion-slide *ngFor=\"let card of [0,1,2,3,4,5,6]\" style=\"width: 150px; height: 200px; border: 2px solid #f8f8f8;\">\n      <ion-col>        \n        <ion-img (click)=\"abriDescricao();\" style=\"pointer-events:none; \" src=\"https://love.doghero.com.br/wp-content/uploads/2019/09/Golden.jpg.jpg\"></ion-img>\n        <ion-label style=\"text-align: start;\">Cachorrinho </ion-label>\n        <ion-button shape=\"block\" fill=\"outline\" (click)=\"abriDescricao();\" >Ver Mais</ion-button>\n      </ion-col>\n    </ion-slide>\n  </ion-slides>\n\n  <p style=\"padding: 10px;\"><b>Os gatinhos</b></p>\n  <ion-slides [options]=\"{ slidesPerView: 'auto', zoom: false, grabCursor: true }\">\n    <ion-slide *ngFor=\"let card of [0,1,2,3,4,5,6]\" style=\"width: 150px; height: 200px; border: 2px solid #f8f8f8;\">\n      <ion-col>        \n        <ion-img style=\"pointer-events:none; \" src=\"https://www.joanadarcam.com.br/wp-content/uploads/2020/02/images-92.jpeg\"></ion-img>\n        <ion-label style=\"text-align: start;\">Gatinho </ion-label>\n      </ion-col>\n    </ion-slide>\n  </ion-slides>\n\n\n</ion-content>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header class=\"ion-no-border\">\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-menu-button></ion-menu-button>\n    </ion-buttons>\n\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-button expand=\"full\" color=\"success\" (click)=\"abrirFiltro()\">Filtro</ion-button>\n\n  \n  <ion-slides [options]=\"slideOpt\">\n    <ion-slide *ngFor=\"let card of patro\" style=\"width: 250px; height: 200px; border: 2px solid #f8f8f8; \">\n      <ion-col>\n        <ion-img (click)=\"abriDescricao();\" style=\"pointer-events:none; border-radius: 6px;\"\n          src={{card.img}}></ion-img>  \n          <!-- <ion-label style=\"text-align: start;\">{{card.nome}}</ion-label> -->\n      </ion-col>\n    </ion-slide>\n  </ion-slides>\n\n  <div>\n  <p style=\"padding: 10px;\"><b>Os doguinhos </b><ion-button style=\"align-self: flex-end;\" size=\"small\" fill=\"outline\" (click)=\"todos();\">Ver mais</ion-button> </p>\n</div>\n  \n  <ion-slides [options]=\"{ slidesPerView: 'auto', zoom: false, grabCursor: true }\">\n    <ion-slide *ngFor=\"let card of [0,1,2,3,4,5,6]\" style=\"width: 150px; height: 200px; border: 2px solid #f8f8f8;\">\n      <ion-col>\n        <ion-img (click)=\"abriDescricao();\" style=\"pointer-events:none; \"\n          src=\"https://love.doghero.com.br/wp-content/uploads/2019/09/Golden.jpg.jpg\"></ion-img>\n        <ion-label style=\"text-align: start;\">Cachorrinho </ion-label>\n        <ion-button shape=\"block\" fill=\"outline\" (click)=\"abriDescricao();\">Ver Mais</ion-button>\n      </ion-col>\n    </ion-slide>\n  </ion-slides>\n\n  <div>\n    <p style=\"padding: 10px;\"><b>Os gatinhos </b><ion-button style=\"align-self: flex-end;\" size=\"small\" fill=\"outline\">Ver mais</ion-button> </p>\n  </div>\n  <ion-slides [options]=\"{ slidesPerView: 'auto', zoom: false, grabCursor: true }\">\n    <ion-slide *ngFor=\"let card of [0,1,2,3,4,5,6]\" style=\"width: 150px; height: 200px; border: 2px solid #f8f8f8;\">\n      <ion-col>\n        <ion-img style=\"pointer-events:none; \"\n          src=\"https://www.joanadarcam.com.br/wp-content/uploads/2020/02/images-92.jpeg\"></ion-img>\n        <ion-label style=\"text-align: start;\">Gatinho </ion-label>\n      </ion-col>\n    </ion-slide>\n  </ion-slides>\n\n\n</ion-content>");
 
 /***/ }),
 
@@ -120,16 +120,33 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
 /* harmony import */ var _filtros_model_filtros_model_page__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../filtros-model/filtros-model.page */ "./src/app/filtros-model/filtros-model.page.ts");
 /* harmony import */ var _detalhe_produto_detalhe_produto_page__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../detalhe-produto/detalhe-produto.page */ "./src/app/detalhe-produto/detalhe-produto.page.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+
 
 
 
 
 
 let HomePage = class HomePage {
-    constructor(modalCtrl) {
+    constructor(modalCtrl, router) {
         this.modalCtrl = modalCtrl;
+        this.router = router;
     }
     ngOnInit() {
+        this.patro = [
+            { id: 1, nome: "Bicho Vivo", img: "https://irga.rs.gov.br/upload/recortes/201811/09151236_30797_GD.jpg", link: "link site ou rede" },
+            { id: 2, nome: "Cat Dog", img: "https://irga.rs.gov.br/upload/recortes/201811/09151236_30797_GD.jpg", link: "link site ou rede" },
+            { id: 3, nome: "Auquimia", img: "https://irga.rs.gov.br/upload/recortes/201811/09151236_30797_GD.jpg", link: "link site ou rede" },
+            { id: 4, nome: "SOS Minas Pet", img: "https://irga.rs.gov.br/upload/recortes/201811/09151236_30797_GD.jpg", link: "link site ou rede" },
+            { id: 5, nome: "Shopping Rural", img: "https://irga.rs.gov.br/upload/recortes/201811/09151236_30797_GD.jpg", link: "link site ou rede" },
+        ];
+        this.slideOpt = {
+            loop: true,
+            autoplay: true,
+            slidesPerView: 'auto',
+            zoom: false,
+            grabCursor: true,
+        };
     }
     abrirFiltro() {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
@@ -138,6 +155,9 @@ let HomePage = class HomePage {
             });
             modal.present();
         });
+    }
+    todos() {
+        this.router.navigate(['/lista-todos']);
     }
     abriDescricao() {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
@@ -149,7 +169,8 @@ let HomePage = class HomePage {
     }
 };
 HomePage.ctorParameters = () => [
-    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"] }
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] }
 ];
 HomePage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({

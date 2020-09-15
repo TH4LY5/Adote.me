@@ -13,18 +13,23 @@
   <ion-list>
     <ion-card *ngFor="let ani of Animais">
       <ion-card-header>
-        <ion-card-title>
+        <ion-img (click)="abriDescricao();" style="pointer-events:none; border-radius: 6px;"
+        src={{ani.img}}></ion-img>  
+        <ion-card-title style="text-align: center;">
           {{ani.nome}}
         </ion-card-title>
       </ion-card-header>
       <ion-card-content>
-        <ion-row class="ion-aling-itens-center">
+        <ion-button color="primary" expand="full" (click)="abriDescricao();">Ver</ion-button>
+        <!-- <ion-row class="ion-aling-itens-center">
           <ion-col size="4" class="ion-text-right">
-            <ion-button fill="clear" (click)="abriDescricao();">
+            <ion-button fill="clear" >
               <ion-icon name="add"></ion-icon>
             </ion-button>
+           
+
           </ion-col>
-        </ion-row>
+        </ion-row> -->
       </ion-card-content>
     </ion-card>
 

@@ -267,6 +267,28 @@
             return m.FiltrosModelPageModule;
           });
         }
+      }, {
+        path: 'lista-todos',
+        loadChildren: function loadChildren() {
+          return Promise.all(
+          /*! import() | lista-todos-lista-todos-module */
+          [__webpack_require__.e("common"), __webpack_require__.e("lista-todos-lista-todos-module")]).then(__webpack_require__.bind(null,
+          /*! ./lista-todos/lista-todos.module */
+          "./src/app/lista-todos/lista-todos.module.ts")).then(function (m) {
+            return m.ListaTodosPageModule;
+          });
+        }
+      }, {
+        path: 'meu-perfil',
+        loadChildren: function loadChildren() {
+          return __webpack_require__.e(
+          /*! import() | meu-perfil-meu-perfil-module */
+          "meu-perfil-meu-perfil-module").then(__webpack_require__.bind(null,
+          /*! ./meu-perfil/meu-perfil.module */
+          "./src/app/meu-perfil/meu-perfil.module.ts")).then(function (m) {
+            return m.MeuPerfilPageModule;
+          });
+        }
       }];
 
       var AppRoutingModule = function AppRoutingModule() {
@@ -371,12 +393,11 @@
             title: 'Inicio',
             url: '/home',
             icon: 'home'
+          }, {
+            title: 'Meu perfil',
+            url: '/meu-perfil',
+            icon: 'person'
           }, // {
-          //   title: 'detalhe',
-          //   url: '/detalhe-produto',
-          //   icon: 'home'
-          // },
-          // {
           //   title: 'Segunda via de boleto',
           //   url: '/boleto',
           //   icon: 'document-text'
@@ -634,7 +655,7 @@
     /***/
     function _(module, exports, __webpack_require__) {
       module.exports = __webpack_require__(
-      /*! /home/willian/Documentos/Projetos/Adoteme/App/src/main.ts */
+      /*! /home/willian/Documentos/Projetos/Adote.me/App/src/main.ts */
       "./src/main.ts");
       /***/
     }

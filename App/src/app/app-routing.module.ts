@@ -42,6 +42,10 @@ const routes: Routes = [
   {
     path: 'lista-todos',
     loadChildren: () => import('./lista-todos/lista-todos.module').then( m => m.ListaTodosPageModule)
+  },
+  {
+    path: 'meu-perfil',
+    loadChildren: () => import('./meu-perfil/meu-perfil.module').then( m => m.MeuPerfilPageModule)
   }
 ];
 

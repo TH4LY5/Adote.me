@@ -486,8 +486,8 @@ module.exports = content.locals || {};
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/willian/Documentos/Projetos/Adoteme/App/src/theme/variables.scss */"./src/theme/variables.scss");
-module.exports = __webpack_require__(/*! /home/willian/Documentos/Projetos/Adoteme/App/src/global.scss */"./src/global.scss");
+__webpack_require__(/*! /home/willian/Documentos/Projetos/Adote.me/App/src/theme/variables.scss */"./src/theme/variables.scss");
+module.exports = __webpack_require__(/*! /home/willian/Documentos/Projetos/Adote.me/App/src/global.scss */"./src/global.scss");
 
 
 /***/ })

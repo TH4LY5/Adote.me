@@ -6,4 +6,5 @@ export class Animais {
     sexo: String
     cor: String
     porte: String
+    img: String
 }

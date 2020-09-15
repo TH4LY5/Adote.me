@@ -327,6 +327,14 @@ const routes = [
     {
         path: 'filtros-model',
         loadChildren: () => Promise.all(/*! import() | filtros-model-filtros-model-module */[__webpack_require__.e("common"), __webpack_require__.e("filtros-model-filtros-model-module")]).then(__webpack_require__.bind(null, /*! ./filtros-model/filtros-model.module */ "./src/app/filtros-model/filtros-model.module.ts")).then(m => m.FiltrosModelPageModule)
+    },
+    {
+        path: 'lista-todos',
+        loadChildren: () => Promise.all(/*! import() | lista-todos-lista-todos-module */[__webpack_require__.e("common"), __webpack_require__.e("lista-todos-lista-todos-module")]).then(__webpack_require__.bind(null, /*! ./lista-todos/lista-todos.module */ "./src/app/lista-todos/lista-todos.module.ts")).then(m => m.ListaTodosPageModule)
+    },
+    {
+        path: 'meu-perfil',
+        loadChildren: () => __webpack_require__.e(/*! import() | meu-perfil-meu-perfil-module */ "meu-perfil-meu-perfil-module").then(__webpack_require__.bind(null, /*! ./meu-perfil/meu-perfil.module */ "./src/app/meu-perfil/meu-perfil.module.ts")).then(m => m.MeuPerfilPageModule)
     }
 ];
 let AppRoutingModule = class AppRoutingModule {
@@ -392,11 +400,11 @@ let AppComponent = class AppComponent {
                 url: '/home',
                 icon: 'home'
             },
-            // {
-            //   title: 'detalhe',
-            //   url: '/detalhe-produto',
-            //   icon: 'home'
-            // },
+            {
+                title: 'Meu perfil',
+                url: '/meu-perfil',
+                icon: 'person'
+            },
             // {
             //   title: 'Segunda via de boleto',
             //   url: '/boleto',
@@ -558,7 +566,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/willian/Documentos/Projetos/Adoteme/App/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /home/willian/Documentos/Projetos/Adote.me/App/src/main.ts */"./src/main.ts");
 
 
 /***/ })
