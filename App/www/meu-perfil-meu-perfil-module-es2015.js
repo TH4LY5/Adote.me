@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header class=\"ion-no-border\">\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-menu-button></ion-menu-button>\n    </ion-buttons>\n\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n\n</ion-content>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header class=\"ion-no-border\">\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-menu-button></ion-menu-button>\n    </ion-buttons>\n    <ion-buttons slot=\"end\">\n      <!-- <ion-menu-button></ion-menu-button> -->\n      <ion-button  ><ion-icon name=\"create-outline\"></ion-icon></ion-button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n<p style=\"text-align: center; font-size: 20px;\"><b>Olá Thalys</b></p>\n<p style=\"text-align: center; font-size: 12px;\">Meu telefone: +55 33 9 9999-9999</p>\n<p style=\"text-align: center; font-size: 12px;\">Meu endereço: Av. Gesios Carlos da Silva</p>\n\n\n</ion-content>\n");
 
 /***/ }),
 
