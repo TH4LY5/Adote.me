@@ -13,6 +13,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
 
+import { UsuarioComponent } from './usuario/usuario.component';
+import { AnimaisComponent } from './animais/animais.component';
+
 
 @NgModule({
   imports: [
@@ -27,7 +30,9 @@ import { ComponentsModule } from './components/components.module';
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-    AuthLayoutComponent
+    AuthLayoutComponent,
+    UsuarioComponent,
+    AnimaisComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

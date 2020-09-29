@@ -33,6 +33,12 @@ export class AppComponent implements OnInit {
       url: '/suporte',
       icon: 'help-circle'
       
+    },
+    {
+      title: 'Sair',
+      url: '/login',
+      icon: 'exit'
+      
     }
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
