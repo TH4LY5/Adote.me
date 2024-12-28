@@ -90,7 +90,7 @@ Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](LICEN
 ## Contato 📬  
 
 Para dúvidas, sugestões ou parcerias, entre em contato:  
-- **GitHub**: [Seu Usuário](https://github.com/th4ly5)  
+- **GitHub**: [Thalys](https://github.com/th4ly5)  
 
 ---
 
