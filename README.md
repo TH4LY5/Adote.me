@@ -39,7 +39,7 @@ O **Adote.me** é um aplicativo desenvolvido com **Angular** e **Ionic** para co
 
 1. Clone o repositório:  
    \`\`\`bash
-   git clone https://github.com/seu-usuario/adote-me.git
+   git clone https://github.com/th4ly5/adote-me.git
    cd adote-me
    \`\`\`
 
